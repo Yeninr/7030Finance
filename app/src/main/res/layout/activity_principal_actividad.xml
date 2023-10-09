@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PrincipalActividad">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TopBar"
+        android:layout_marginTop="2dp"
+        app:tabIndicatorColor="#ffcc66"
+        app:tabTextColor="@color/black">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:text="Renda" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E91E63"
+            android:text="Saida" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="447dp"
+        android:layout_below="@+id/tab_layout"
+        android:layout_marginTop="6dp"
+        android:background="#FFCC66" />
+
+
+    <view
+        android:id="@+id/TopBar"
+        class="com.google.android.material.appbar.AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:id="@+id/mes"
+        android:layout_width="67dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="175dp"
+        android:text="Julho"
+        android:textColor="#384FCF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monto"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-71dp"
+        android:layout_marginEnd="150dp"
+        android:text="Saldo em conta"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mes" />
+
+    <TextView
+        android:id="@+id/monto"
+        android:layout_width="171dp"
+        android:layout_height="37dp"
+        android:layout_above="@+id/tab_layout"
+        android:layout_below="@+id/mes"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="7dp"
+        android:text="BRL 1400,00"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo" />
+
+    <ImageView
+        android:id="@+id/user"
+        android:layout_width="89dp"
+        android:layout_height="85dp"
+        android:layout_alignBottom="@+id/monto"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toStartOf="@+id/subtitulo"
+        app:srcCompat="@drawable/ic_launcher" />
+
+    <view
+        android:id="@+id/barbottom"
+        class="com.google.android.material.bottomappbar.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_pager"
+        android:layout_marginTop="2dp" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="78dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/view_pager"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="93dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/view_pager"
+        android:layout_marginStart="-14dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/home"
+        app:srcCompat="@drawable/update" />
+
+    <ImageView
+        android:id="@+id/bt_gastos"
+        android:layout_width="122dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/view_pager"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="-16dp"
+        android:layout_toEndOf="@+id/imageView13"
+        app:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:layout_below="@+id/view_pager"
+        android:layout_marginStart="-18dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/bt_gastos"
+        app:srcCompat="@drawable/listado" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="77dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/view_pager"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/imageView15"
+        app:srcCompat="@drawable/lista2" />
+
+
+</RelativeLayout >

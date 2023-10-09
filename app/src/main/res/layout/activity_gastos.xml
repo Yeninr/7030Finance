@@ -1,0 +1,63 @@
+<!-- gastos_activity.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gastosLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E91E63">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view2"
+        android:layout_width="379dp"
+        android:layout_height="276dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="314dp"
+        android:background="#FFFCFC">
+
+        <Button
+            android:id="@+id/listGastosButton"
+            android:layout_width="160dp"
+            android:layout_height="56dp"
+            android:onClick="Enviar"
+            android:text="Listar Gastos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gastosEditText" />
+
+        <EditText
+            android:id="@+id/gastosEditText"
+            android:layout_width="313dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:hint="Digite seus gastos"
+            android:inputType="numberDecimal"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="@+id/view2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="51dp"
+        android:text="Informe seus gastos:"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Outros elementos de interface do usuário podem ser adicionados aqui -->
+
+</RelativeLayout>
