@@ -4,3 +4,10 @@ Anexo no projeto:
 1- Codigo do Projecto completo
 2- PDF do Scrum do projeto
 3- Vídeo da execução do projeto
+
+Criado por: 
+Bruno Ramos Rodrigues
+Silas Silva Filho
+Yenin E. Rodríguez P.
+
+
